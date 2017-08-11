@@ -1,0 +1,5 @@
+---
+
+- name:      Join Kubernetes Cluster
+  become:    true
+  shell:     kubeadm join --token={{ kubeadm_token }} {{ kubernetes_master_ip }}:6443
